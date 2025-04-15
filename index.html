@@ -3,103 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Анкета пользователя</title>
+  <title>Рекомендации по типу фигуры и цветотипу</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      line-height: 1.6;
       padding: 20px;
-      max-width: 600px;
+      max-width: 900px;
       margin: auto;
     }
-    label {
-      display: block;
-      margin-top: 15px;
+    h2 {
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      margin-top: 30px;
     }
-    input, select {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-    }
-    button {
+    h3 {
       margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
+    }
+    h4 {
+      margin: 10px 0 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .section {
+      margin-bottom: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>Заполнение профиля</h1>
 
-  <form id="profileForm">
-    <label>Имя:
-      <input type="text" name="name" required />
-    </label>
+  <h1>Рекомендации по типу фигуры и цветотипу</h1>
 
-    <label>Пол:
-      <select name="gender" required onchange="toggleGenderFields()">
-        <option value="">Выберите</option>
-        <option value="female">Женский</option>
-        <option value="male">Мужской</option>
-      </select>
-    </label>
+  <div class="section">
+    <h2>ЖЕНСКИЕ ТИПЫ ФИГУРЫ</h2>
+    <h3>Песочные часы</h3>
+    <p>Описание: Сбалансированная фигура с чётко выраженной талией, грудь и бёдра примерно одного объёма.</p>
+    <h4>Верх</h4>
+    <ul><li>Приталенные топы и блузы.</li><li>V-образные и фигурные вырезы.</li><li>Жакеты на пуговице по фигуре.</li></ul>
+    <strong>Что нельзя:</strong> бесформенные или прямые силуэты, скрывающие талию.
+    <h4>Низ</h4>
+    <ul><li>Брюки с высокой посадкой.</li><li>Юбки-карандаш, трапеции.</li><li>Классические джинсы средней посадки.</li></ul>
+    <strong>Что нельзя:</strong> заниженная талия, плиссе без пояса.
+    <h4>Платья</h4>
+    <ul><li>Облегающие платья-футляры.</li><li>Платья с запахом.</li><li>Силуэты с чёткой талией.</li></ul>
+    <strong>Что нельзя:</strong> прямые или мешковатые модели.
+    <h4>Деловые костюмы</h4>
+    <ul><li>Приталенные пиджаки.</li><li>Юбки-карандаш или брюки со стрелками.</li><li>Комплекты, подчёркивающие талию.</li></ul>
+    <strong>Что нельзя:</strong> мешковатые или мужского кроя пиджаки.
+    <h4>Обувь</h4>
+    <ul><li>Лодочки.</li><li>Ботильоны с каблуком.</li><li>Сапоги по ноге.</li></ul>
+  </div>
 
-    <label>Возраст:
-      <input type="number" name="age" min="10" max="100" required />
-    </label>
+  <div class="section">
+    <h2>РЕКОМЕНДАЦИИ ПО ЦВЕТОТИПАМ</h2>
+    <h3>Весна</h3>
+    <p>Описание: Светлая, тёплая внешность с лёгким румянцем и золотистым оттенком кожи. Глаза – зелёные, светло-карие или голубые. Волосы – тёплый блонд, русые, медовые.</p>
+    <h4>Твои лучшие цвета:</h4>
+    <ul><li>Персиковый</li><li>Светло-зелёный</li><li>Кремовый</li><li>Коралловый</li></ul>
+    <h4>Чего избегать:</h4>
+    <ul><li>Холодные синие и серые</li><li>Чёрный</li><li>Белоснежный</li></ul>
+    <h4>Украшения:</h4>
+    <ul><li>Тёплое золото</li><li>Янтарь</li></ul>
+    <h4>Макияж:</h4>
+    <ul><li>Тёплые персиковые румяна</li><li>Кремовые тени</li><li>Тёплый розовый блеск</li></ul>
+    <h4>Основные цвета (база гардероба):</h4>
+    <ul><li>Слоновая кость</li><li>Светлый беж</li><li>Карамель</li><li>Оливковый</li></ul>
+    <h4>Акцентные цвета:</h4>
+    <ul><li>Коралловый</li><li>Абрикос</li><li>Тёплый зелёный</li><li>Бледно-голубой</li></ul>
+    <h4>Чего избегать?</h4>
+    <ul><li>Чисто белый</li><li>Холодные оттенки серого</li><li>Неоновые цвета</li><li>Глубокий чёрный</li></ul>
+  </div>
 
-    <label>Рост (см):
-      <input type="number" name="height" required />
-    </label>
-
-    <label>Обхват груди (см):
-      <input type="number" name="bust" required />
-    </label>
-
-    <label>Обхват талии (см):
-      <input type="number" name="waist" required />
-    </label>
-
-    <label>Обхват бёдер (см):
-      <input type="number" name="hips" required />
-    </label>
-
-    <label>Ширина плеч (см):
-      <input type="number" name="shoulders" required />
-    </label>
-
-    <label>Длина туловища (см):
-      <input type="number" name="torso" required />
-    </label>
-
-    <label>Длина ног (см):
-      <input type="number" name="legs" required />
-    </label>
-
-    <label>Особенности фигуры:
-      <select name="proportions">
-        <option value="">—</option>
-        <option value="short_legs">Короткие ноги</option>
-        <option value="long_torso">Длинный торс</option>
-        <option value="tall">Высокий рост</option>
-        <option value="short">Низкий рост</option>
-      </select>
-    </label>
-
-    <button type="submit">Продолжить</button>
-  </form>
-
-  <script>
-    function toggleGenderFields() {
-      // Здесь можно будет адаптировать форму под пол
-    }
-
-    document.getElementById("profileForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const profile = Object.fromEntries(formData.entries());
-      console.log("Ответы пользователя:", profile);
-      alert("Анкета сохранена! Переход к анализу...");
-    });
-  </script>
 </body>
 </html>
